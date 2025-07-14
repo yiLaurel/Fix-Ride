@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicio mecánico en ruta para ciclistas en Querétaro - Asistencia rápida y profesional">
+    <meta name="keywords" content="servicio mecánico bicicleta, asistencia ciclista Querétaro, reparación bicicleta ruta">
+    <meta property="og:title" content="Fix&Ride - Servicio Mecánico en Ruta para Ciclistas">
+    <meta property="og:description" content="Asistencia rápida y profesional para ciclistas en Querétaro">
+    <title>Fix&Ride - Servicio Mecánico en Ruta para Ciclistas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+    <a href="https://wa.me/524428223472?text=🚴‍♂️ ¡Hola Fix&Ride! Necesito asistencia mecánica en ruta.%0A%0A📍 Ubicación:%0A🔧 Problema:%0A📞 Teléfono de contacto:" 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-text">
+                    <h1>Fix<span>&</span>Ride</h1>
+                    <p>Asistencia mecánica para ciclistas</p>
+                </div>
+            </div>
+            
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#cobertura">Cobertura</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h2>Servicio Mecánico en Ruta para Ciclistas</h2>
+            <p>¿Problemas con tu bicicleta durante tu recorrido en Querétaro? No te preocupes, estamos aquí para ayudarte. Servicio rápido, profesional y en el lugar donde lo necesites.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/524428223472?text=🚴‍♂️ ¡Hola Fix&Ride! Necesito asistencia mecánica en ruta.%0A%0A📍 Ubicación:%0A🔧 Problema:%0A📞 Teléfono de contacto:" 
+                   class="btn" target="_blank">
+                   <i class="fab fa-whatsapp"></i> Solicitar asistencia
+                </a>
+                <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="servicios" id="servicios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios</h2>
+                <p>Soluciones rápidas y efectivas para que puedas continuar con tu ruta sin preocupaciones</p>
+            </div>
+            
+            <div class="servicios-grid">
+                <div class="servicio" data-service="1">
+                    <div class="servicio-img">
+                        <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=2070&auto=format&fit=crop" 
+                             alt="Reparación de pinchazos" loading="lazy">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="servicio-content">
+                        <h3>Reparación de Pinchazos</h3>
+                        <p>Cambio rápido de cámara o parcheado profesional para que vuelvas a la ruta en minutos.</p>
+                        <a href="https://wa.me/524428223472?text=🚴‍♂️ ¡Hola Fix&Ride! Necesito reparación de pinchazo.%0A📍 Ubicación:%0A📞 Teléfono de contacto:" 
+                           class="btn btn-small" target="_blank">
+                           <i class="fab fa-whatsapp"></i> Solicitar
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="servicio" data-service="2">
+                    <div class="servicio-img">
+                        <img src="https://images.unsplash.com/photo-1604537466573-5e94508fd243?q=80&w=2069&auto=format&fit=crop" 
+                             alt="Ajuste de frenos" loading="lazy">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="servicio-content">
+                        <h3>Ajuste de Frenos</h3>
+                        <p>Ajuste y alineación de frenos para garantizar tu seguridad durante el recorrido.</p>
+                        <a href="https://wa.me/524428223472?text=🚴‍♂️ ¡Hola Fix&Ride! Necesito ajuste de frenos.%0A📍 Ubicación:%0A📞 Teléfono de contacto:" 
+                           class="btn btn-small" target="_blank">
+                           <i class="fab fa-whatsapp"></i> Solicitar
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="servicio" data-service="3">
+                    <div class="servicio-img">
+                        <img src="https://images.unsplash.com/photo-1511994298241-608e28f14fde?q=80&w=2070&auto=format&fit=crop" 
+                             alt="Ajuste de cambios" loading="lazy">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="servicio-content">
+                        <h3>Ajuste de Cambios</h3>
+                        <p>Optimización del sistema de cambios para un pedaleo suave y eficiente.</p>
+                        <a href="https://wa.me/524428223472?text=🚴‍♂️ ¡Hola Fix&Ride! Necesito ajuste de cambios.%0A📍 Ubicación:%0A📞 Teléfono de contacto:" 
+                           class="btn btn-small" target="_blank">
+                           <i class="fab fa-whatsapp"></i> Solicitar
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="servicio" data-service="4">
+                    <div class="servicio-img">
+                        <img src="https://images.unsplash.com/photo-1551091708-fda32ed3178c?q=80&w=2070&auto=format&fit=crop" 
+                             alt="Asistencia general" loading="lazy">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="servicio-content">
+                        <h3>Asistencia General</h3>
+                        <p>Diagnóstico y solución de cualquier problema mecánico que puedas tener con tu bicicleta.</p>
+                        <a href="https://wa.me/524428223472?text=🚴‍♂️ ¡Hola Fix&Ride! Necesito asistencia general.%0A📍 Ubicación:%0A📞 Teléfono de contacto:" 
+                           class="btn btn-small" target="_blank">
+                           <i class="fab fa-whatsapp"></i> Solicitar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="equipo" id="equipo">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestro Equipo</h2>
+                <p>Profesionales apasionados por el ciclismo y comprometidos con tu seguridad</p>
+            </div>
+            
+            <div class="equipo-container">
+                <div class="equipo-img">
+                    <img src="https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?q=80&w=2186&auto=format&fit=crop" 
+                         alt="Equipo de trabajo" loading="lazy">
+                </div>
+                <div class="equipo-content">
+                    <h3>Expertos en Asistencia Ciclista</h3>
+                    <p>En Fix&Ride contamos con un equipo especializado que garantiza un servicio de excelencia en todo Querétaro y sus alrededores.</p>
+                    
+                    <div class="equipo-member">
+                        <h4>Mecánico Especialista</h4>
+                        <p>Con más de 10 años de experiencia en reparación de bicicletas de alto rendimiento.</p>
+                    </div>
+                    
+                    <div class="equipo-member">
+                        <h4>Técnico de Respuesta Rápida</h4>
+                        <p>Especializado en asistencia en ruta con tiempos de respuesta récord.</p>
+                    </div>
+                    
+                    <div class="equipo-member">
+                        <h4>Coordinador de Eventos</h4>
+                        <p>Encargado de asegurar nuestra presencia en todos los eventos ciclistas de la región.</p>
+                    </div>
+                    
+                    <div class="equipo-member">
+                        <h4>Líder de Servicio al Cliente</h4>
+                        <p>Garantiza que cada interacción con nuestros clientes sea excepcional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cobertura" id="cobertura">
+        <div class="container">
+            <div class="section-title">
+                <h2>Zona de Cobertura</h2>
+                <p>Estamos presentes en todas las rutas y eventos ciclistas de Querétaro</p>
+            </div>
+            
+            <div id="mapa-cobertura" style="height: 500px; width: 100%; border-radius: 8px; margin-bottom: 20px;"></div>
+            
+            <div class="cobertura-info">
+                <div class="cobertura-list">
+                    <h3>Áreas cubiertas y tiempos de respuesta:</h3>
+                    <ul>
+                        <li><i class="fas fa-clock"></i> Centro Histórico - 15 min</li>
+                        <li><i class="fas fa-clock"></i> Juriquilla - 20 min</li>
+                        <li><i class="fas fa-clock"></i> El Marqués - 25 min</li>
+                        <li><i class="fas fa-clock"></i> Corregidora - 20 min</li>
+                        <li><i class="fas fa-clock"></i> La Cañada - 30 min</li>
+                        <li><i class="fas fa-clock"></i> San Juan del Río - 35 min</li>
+                    </ul>
+                </div>
+                
+                <div class="cobertura-destacado">
+                    <div class="cobertura-card">
+                        <i class="fas fa-biking"></i>
+                        <h4>Eventos Ciclistas</h4>
+                        <p>Cobertura especial en competencias y eventos ciclistas en todo el estado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonios" id="testimonios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Testimonios</h2>
+                <p>Lo que dicen los ciclistas que han utilizado nuestro servicio</p>
+            </div>
+            
+            <div class="testimonios-container">
+                <div class="testimonio">
+                    <div class="testimonio-content">
+                        <p>"Me salvaron el día cuando se me pinchó la rueda en el Cerro de las Campanas. Llegaron en menos de 20 minutos y me solucionaron el problema al instante. ¡Totalmente recomendado!"</p>
+                    </div>
+                    <div class="testimonio-author">
+                        <div class="author-img">
+                            <img src="./perfiles/ana-lopez.jpeg" alt="Ana López">
+                        </div>
+                        <div class="author-info">
+                            <h4>Ana López</h4>
+                            <p>Ciclista recreativa</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonio">
+                    <div class="testimonio-content">
+                        <p>"Durante la carrera Querétaro-San Juan del Río, mis frenos empezaron a fallar. Llamé a Fix&Ride y en 15 minutos estaban allí ajustándolos. Pude terminar la carrera gracias a ellos."</p>
+                    </div>
+                    <div class="testimonio-author">
+                        <div class="author-img">
+                            <img src="./perfiles/javier-ruiz.jpeg" alt="Javier Ruiz">
+                        </div>
+                        <div class="author-info">
+                            <h4>Javier Ruiz</h4>
+                            <p>Ciclista competitivo</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonio">
+                    <div class="testimonio-content">
+                        <p>"El servicio es excelente. No solo arreglaron mi cadena rota en Juriquilla, sino que además me dieron consejos para mantener mejor mi bici. Muy profesionales."</p>
+                    </div>
+                    <div class="testimonio-author">
+                        <div class="author-img">
+                            <img src="./perfiles/david-gonzales.jpeg" alt="David González">
+                        </div>
+                        <div class="author-info">
+                            <h4>David González</h4>
+                            <p>Ciclista urbano</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+                <p>¿Necesitas asistencia en ruta o tienes alguna pregunta? Contáctanos</p>
+            </div>
+            
+            <div class="contacto-container">
+                <div class="contacto-info">
+                    <h3>Información de Contacto</h3>
+                    
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contacto-text">
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/524428223472" target="_blank">+52 442 822 3472</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contacto-text">
+                            <h4>Teléfono</h4>
+                            <a href="tel:+524428223472">442 822 3472</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contacto-text">
+                            <h4>Email</h4>
+                            <a href="mailto:info@fixandride.mx">info@fixandride.mx</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contacto-text">
+                            <h4>Horario</h4>
+                            <p>Lunes a Domingo: 6:00 - 22:00</p>
+                            <p>Servicio de emergencia 24h para eventos</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Strava"><i class="fab fa-strava"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contacto-form">
+                    <h3>Envíanos un mensaje</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Fix&Ride</h3>
+                    <p>Servicio mecánico en ruta para ciclistas en Querétaro. Asistencia rápida y profesional.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#cobertura">Cobertura</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="https://wa.me/524428223472" target="_blank">WhatsApp</a></li>
+                        <li><a href="tel:+524428223472">442 822 3472</a></li>
+                        <li><a href="mailto:info@fixandride.mx">info@fixandride.mx</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="current-year"></span> Fix&Ride. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-message">
+                <h3>¡Gracias por contactarnos!</h3>
+                <p>Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo lo antes posible.</p>
+                <button class="btn modal-btn">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
